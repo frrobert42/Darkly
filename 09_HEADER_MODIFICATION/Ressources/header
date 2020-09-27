@@ -1,0 +1,12 @@
+When you inspect the source code of index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c
+you see this two things in comments:
+
+    You must cumming from : "https://www.nsa.gov/" to go to the next step
+
+    Let's use this browser : "ft_bornToSec". It will help you a lot.
+
+So let's change the header (or do it with a curl request)
+    referer = "https://www.nsa.gov/"
+    user_agent = "ft_bornToSec"
+
+the page now print the flag

